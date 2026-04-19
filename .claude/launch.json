@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "NestJS Server (dev)",
+      "runtimeExecutable": "pnpm",
+      "runtimeArgs": ["server", "start:dev"],
+      "port": 3000
+    },
+    {
+      "name": "Expo Native (dev)",
+      "runtimeExecutable": "pnpm",
+      "runtimeArgs": ["native", "start"],
+      "port": 8081
+    }
+  ]
+}
