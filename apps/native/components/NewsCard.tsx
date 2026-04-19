@@ -17,6 +17,7 @@ interface NewsCardProps {
 
 export default function NewsCard({ item }: NewsCardProps) {
   return (
+    <View style={styles.shadow}>
     <View style={styles.card}>
       {item.imageUrl && (
         <Image source={{ uri: item.imageUrl }} style={styles.image} resizeMode="cover" />
@@ -36,20 +37,25 @@ export default function NewsCard({ item }: NewsCardProps) {
         </View>
       </View>
     </View>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
+  shadow: {
+    flex: 1,
+    borderRadius: 16,
+    backgroundColor: '#ffffff',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 10 },
+    shadowOpacity: 0.18,
+    shadowRadius: 24,
+    elevation: 10,
+  },
   card: {
     flex: 1,
-    backgroundColor: '#ffffff',
     borderRadius: 16,
     overflow: 'hidden',
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.08,
-    shadowRadius: 12,
-    elevation: 4,
   },
   image: {
     width: '100%',
